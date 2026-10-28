@@ -1,0 +1,16 @@
+.local_flutter/
+build/
+.dart_tool/
+.idea/
+.DS_Store
+*.iml
+.flutter-plugins*
+ios/Pods/
+android/.gradle/
+node_modules/
+
+.gradle/
+**/.gradle/
+build/
+.dart_tool/
+**/Pods/

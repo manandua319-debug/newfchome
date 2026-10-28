@@ -1,0 +1,64 @@
+ rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /** ---------- Helpers ---------- */
+    function signedIn() { return request.auth != null; }
+    function isSelf(uid) { return signedIn() && request.auth.uid == uid; }
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+
+    /** ---------- Public resource catalogs (read-only) ---------- */
+    match /{colName=^(shelters|sheltersminors|health|healthminors|tents|tentsminors|food|foodminors)$}/{doc} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
+    /** ---------- Users (doc id == auth uid) ---------- */
+    match /users/{uid} {
+      allow create: if isSelf(uid);
+      allow read, update, delete: if isSelf(uid);
+    }
+
+    /** ---------- Private logs (owned by uid field) ---------- */
+    match /moodLogs/{id} {
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+      allow read, update, delete: if signedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    match /journalEntries/{id} {
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+      allow read, update, delete: if signedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    /** ---------- Token Transit requests (per-user isolation) ---------- */
+    match /tt_requests/{id} {
+      // Clients (including anonymous) may create their OWN request,
+      // with required fields and status 'pending'. Block admin-only fields.
+      allow create: if signedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.phone is string
+        && request.resource.data.agencyId is string
+        && request.resource.data.status == 'pending'
+        // Optional fields must be strings if present
+        && (!('destination' in request.resource.data) || request.resource.data.destination is string)
+        && (!('fareLabel' in request.resource.data) || request.resource.data.fareLabel is string)
+        // Prevent clients from setting admin-only fields on create
+        && !('approvedAt' in request.resource.data)
+        && !('redemptionUrl' in request.resource.data)
+        && !('issuedBy' in request.resource.data)
+        && !('adminNotes' in request.resource.data);
+
+      // Read: only the owner can read their requests.
+      allow read: if signedIn() && resource.data.uid == request.auth.uid;
+
+      // Updates/deletes: only admins (e.g., staff tooling / Cloud Functions with admin claim).
+      // (Admins may set status, approvedAt, redemptionUrl, etc.)
+      allow update, delete: if isAdmin();
+    }
+
+    /** ---------- Default deny ---------- */
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

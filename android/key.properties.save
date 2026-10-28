@@ -1,0 +1,9 @@
+XstorePassword=Five03red
+keyPassword=Five03red
+keyAlias=fchome
+storeFile=fchome-release-key.jks
+
+flutter clean
+flutter pub get
+flutter build appbundle --release
+

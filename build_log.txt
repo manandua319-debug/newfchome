@@ -1,0 +1,6 @@
+Building com.mycompany.maps for device (ios-release)...
+Automatically signing iOS for device deployment using specified development team in Xcode project: USUS5C5AT7
+Running Xcode build...                                          
+ └─Compiling, linking and signing...                         3.9s
+Xcode build done.                                           13.2s
+✓ Built build/ios/iphoneos/FCHome.app (61.3MB)

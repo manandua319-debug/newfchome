@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "788634060832",
+    "project_id": "fchome-472b6",
+    "storage_bucket": "fchome-472b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788634060832:android:4ee2899db4543b3f855445",
+        "android_client_info": {
+          "package_name": "com.mycompany.maps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788634060832-0knvmqh2di4cbk0ubt4rklamrdl74gdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.maps",
+            "certificate_hash": "a3f483d464d1b79913e6ee8c3c07df253e7df6dd"
+          }
+        },
+        {
+          "client_id": "788634060832-hva470jr5vmkfv556tqhtdcnremmfamr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.maps",
+            "certificate_hash": "12bc52b533c11e25776aa7a89aa7973690c907d2"
+          }
+        },
+        {
+          "client_id": "788634060832-p7puajk2s41if94pb64teoge76tjjak9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.maps",
+            "certificate_hash": "362dbf100c2290a4b256ac6d193bff71a695d4e1"
+          }
+        },
+        {
+          "client_id": "788634060832-08brjsl38a259i86o02inu1dsnrm9jhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJHp7QsdWkG-AgCj8TbJujIiqw3DbYoI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788634060832-08brjsl38a259i86o02inu1dsnrm9jhc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "788634060832-vucasqfgl5cpldap4lb3j7dsbfa9jtuj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.maps"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

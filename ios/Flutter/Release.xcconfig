@@ -1,0 +1,5 @@
+#include "Pods/Target Support Files/Pods-FCHome/Pods-FCHome.release.xcconfig"
+#include "Generated.xcconfig"
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(FRAMEWORK_SEARCH_PATHS) $(PODS_CONFIGURATION_BUILD_DIR)
+LIBRARY_SEARCH_PATHS = $(inherited) $(LIBRARY_SEARCH_PATHS) $(PODS_CONFIGURATION_BUILD_DIR)
+

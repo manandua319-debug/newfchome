@@ -1,0 +1,89 @@
+[debug] [2025-10-21T07:13:51.554Z] ----------------------------------------------------------------------
+[debug] [2025-10-21T07:13:51.555Z] Command:       /Users/manan/.nvm/versions/node/v20.19.5/bin/node /Users/manan/.nvm/versions/node/v20.19.5/bin/firebase -P fchome-472b6 emulators:start --only functions
+[debug] [2025-10-21T07:13:51.555Z] CLI Version:   14.19.1
+[debug] [2025-10-21T07:13:51.555Z] Platform:      darwin
+[debug] [2025-10-21T07:13:51.555Z] Node Version:  v20.19.5
+[debug] [2025-10-21T07:13:51.555Z] Time:          Tue Oct 21 2025 00:13:51 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-10-21T07:13:51.555Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-21T07:13:51.556Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-10-21T07:13:51.657Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-21T07:13:51.657Z] > authorizing via signed-in user (manandua319@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-10-21T07:13:51.864Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-21T07:13:51.864Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-21T07:13:51.866Z] Emulator locator file path: /var/folders/28/cxr5fyvs0bl9hz2qs68ztq9r0000gn/T/hub-fchome-472b6.json
+[debug] [2025-10-21T07:13:51.866Z] [hub] writing locator at /var/folders/28/cxr5fyvs0bl9hz2qs68ztq9r0000gn/T/hub-fchome-472b6.json
+[debug] [2025-10-21T07:13:51.867Z] Error: EPERM: operation not permitted, open '/Users/manan/.config/configstore/firebase-tools.json.4096170059'
+    at Object.openSync (node:fs:574:18)
+    at Function.writeFileSync [as sync] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all [as all] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.set (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:91:12)
+    at session (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:187:39)
+    at emulatorSession (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:163:12)
+    at trackEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:82:21)
+    at Command.<anonymous> (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/command.js:93:48)
+    at Command.listener [as _actionHandler] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/commander/index.js:413:31)
+    at Command._parseCommand (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/commander/index.js:914:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-21T07:13:51.867Z] Error: EPERM: operation not permitted, open '/Users/manan/.config/configstore/firebase-tools.json.906701768'
+    at Object.openSync (node:fs:574:18)
+    at Function.writeFileSync [as sync] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all [as all] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.set (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:91:12)
+    at session (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:187:39)
+    at emulatorSession (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:163:12)
+    at trackEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:82:21)
+    at startEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/emulator/controller.js:292:40)
+    at Object.startAll (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/emulator/controller.js:304:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-21T07:13:52.073Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-21T07:13:52.073Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-21T07:13:52.073Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-21T07:13:52.073Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect"}}
+[debug] [2025-10-21T07:13:52.076Z] Error: EPERM: operation not permitted, open '/Users/manan/.config/configstore/firebase-tools.json.8947554'
+    at Object.openSync (node:fs:574:18)
+    at Function.writeFileSync [as sync] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all [as all] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.set (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:91:12)
+    at session (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:187:39)
+    at emulatorSession (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:163:12)
+    at trackEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:82:21)
+    at startEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/emulator/controller.js:292:40)
+    at Object.startAll (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/emulator/controller.js:399:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-21T07:13:52.078Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2025-10-21T07:13:52.079Z] Emulator locator file path: /var/folders/28/cxr5fyvs0bl9hz2qs68ztq9r0000gn/T/hub-fchome-472b6.json
+[debug] [2025-10-21T07:13:52.080Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2025-10-21T07:13:52.081Z] Error: EPERM: operation not permitted, open '/Users/manan/.config/configstore/firebase-tools.json.2127830606'
+    at Object.openSync (node:fs:574:18)
+    at Function.writeFileSync [as sync] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all [as all] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.set (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:91:12)
+    at session (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:187:39)
+    at emulatorSession (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:163:12)
+    at trackEmulator (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/track.js:82:21)
+    at /Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/command.js:143:53
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-21T07:13:52.125Z] Error: EPERM: operation not permitted, open '/Users/manan/.config/configstore/firebase-tools.json.3912542374'
+    at Object.openSync (node:fs:574:18)
+    at Function.writeFileSync [as sync] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all [as all] (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.delete (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/node_modules/configstore/index.js:101:12)
+    at process.<anonymous> (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/bin/cli.js:65:45)
+    at process.emit (node:events:536:35)
+    at process.exit (node:internal/process/per_thread:184:15)
+    at Timeout._onTimeout (/Users/manan/.nvm/versions/node/v20.19.5/lib/node_modules/firebase-tools/lib/errorOut.js:20:17)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)

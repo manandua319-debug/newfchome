@@ -1,0 +1,6 @@
+#include "Pods/Target Support Files/Pods-FCHome/Pods-FCHome.profile.xcconfig"
+#include "Generated.xcconfig"
+
+// Ensure CocoaPods aggregator framework is found when linking
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(FRAMEWORK_SEARCH_PATHS) $(PODS_CONFIGURATION_BUILD_DIR)
+LIBRARY_SEARCH_PATHS = $(inherited) $(LIBRARY_SEARCH_PATHS) $(PODS_CONFIGURATION_BUILD_DIR)

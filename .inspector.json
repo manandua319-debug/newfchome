@@ -1,0 +1,1 @@
+{ "setup": "flutter pub get", "run": "flutter run -d macos" }

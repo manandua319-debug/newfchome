@@ -1,0 +1,16 @@
+==== versions ====
+node: v20.19.5
+npm: 10.8.2
+firebase: 14.19.1
+flutter: 
+┌─────────────────────────────────────────────────────────┐
+│ A new version of Flutter is available!                  │
+│                                                         │
+│ To update to the latest version, run "flutter upgrade". │
+└─────────────────────────────────────────────────────────┘
+Flutter 3.32.8 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision edada7c56e (3 months ago) • 2025-07-25 14:08:03 +0000
+Engine • revision ef0cd00091 (3 months ago) • 2025-07-24 12:23:50 -0700
+Tools • Dart 3.8.1 • DevTools 2.45.1
+dart: Dart SDK version: 3.8.1 (stable) (Wed May 28 00:47:25 2025 -0700) on "macos_arm64"
+cocoapods: 1.16.2
